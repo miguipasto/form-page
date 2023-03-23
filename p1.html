@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+        <title>P1 SINT</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="p1.css">
+        <script src="p1.js"></script>
+
+    </head>
+
+    <body>
+
+        <form id="formulario" action="" onSubmit="return enviar()">
+        
+            <h1 class="titulo">Formulario</h1>
+            
+            <div class="inputContainer">
+                <h3>Nombre y apellidos</h3> 
+                <input type='text' id="cname" name="cname" placeholder="Nombre y primer apellido" onchange="checkName()" pattern="^[A-Za-zñáéíóúÑÁÉÍÓÚ]{3,}\s+[A-Za-zñáéíóúÑÁÉÍÓÚ]{3,})$"><br>
+                <span id="correctName"></span>
+                <span id="errorName"></span><br>
+                <span id="formatName"></span>                             
+            </div>
+
+            <div class="inputContainer">
+                <h3>Login</h3>
+                <input type="text" id="clogin" name="clogin" placeholder="Login" onchange="checkLogin()"><br>   
+                <span id="correctLogin"></span>           
+                <span id="errorLogin"></span><br>
+                <span id="formatLogin"></span>         
+            </div>
+
+            <div class="inputContainer">
+                <h3>Password</h3>
+                <input type="password" id="cpswd" name="cpasswd" placeholder="Contraseña" onchange="checkPswd()"><br>
+                <span id="correctPswd"></span>
+                <span id="errorPswd"></span><br>
+                <span id="formatPswd"></span>
+            </div>
+
+            <div class="inputContainer">
+                <h3>DNI</h3>
+                <input type="text" id ="cdni" name="cdni" placeholder="DNI" onchange="checkDNI()"><br>
+                <span id="correctDNI"></span>
+                <span id="errorDNI"></span><br>
+                <span id="formatDNI"></span>             
+            </div>
+
+            <div class="inputContainer">
+                <h3>Email</h3>
+                <input type="email" id="cemail" name="cemail" placeholder="Email">
+            </div>
+
+            <div class="inputContainer">
+                <h3>Foto</h3>
+                <input type="file" class="inputArchive" name="cfile">
+            </div>
+
+            <h3>Edad</h3>
+            <div class="inputCheckmark">                   
+                <input type="radio" name="cage" value="menos25" class="checkmark" > Menor de 25<br>
+                <input type="radio" name="cage" value="25to40" class="checkmark"> Entre 25 y 40<br>
+                <input type="radio" name="cage" value="40to60" class="checkmark"> Entre 40 y 60<br>
+                <input type="radio" name="cage" value="mas60" class="checkmark"> Más de 60<br>
+            </div>
+            <h3>Géneros musicales que te gustan</h3>
+            <div class="inputCheckmark" id="checkmark">                  
+                <input type="checkbox" class="checkmark" name="cgenre[]"  onclick="checkAll()" id="check" value="Selecciona todos"> Selecionar todas las opciones <br>       
+                <input type="checkbox"  class="checkmark" name="cgenre[]" onclick="checkOne()" value="pop"> Pop <br>
+                <input type="checkbox"  class="checkmark" name="cgenre[]" onclick="checkOne()" value="rock"> Rock <br>
+                <input type="checkbox" class="checkmark" name="cgenre[]" onclick="checkOne()" value="country"> Country <br>
+                <input type="checkbox" class="checkmark" name="cgenre[]" onclick="checkOne()" value="rap"> Rap <br>
+                <input type="checkbox" class="checkmark" name="cgenre[]" onclick="checkOne()" value="soul"> Soul <br><br>
+                <input type="checkbox" class="checkmark" name="cgenre[]"  onclick="uncheckAll()" id="noUnCheck" value="Deseleciona todos"> Deselecionar todas las opciones <br>
+                
+            </div>
+
+            <div class="inputComment">
+                <h3>Comentario </h3>
+                <textarea id="ccomment" name="ccomment" placeholder="Escriba un comentario"></textarea><br>
+            </div>
+
+            <div class="content-select">
+                <h3>Compañia de Internet </h3>
+                <select name="cInternet">
+                    <option value="Movistar">Movistar</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Vodafone">Vodafone</option>
+                    <option value="R">R</option>
+                </select><br><br><br>
+            </div>
+
+            <h3>Selecciona el método de envío</h3>
+            <div class="inputCheckmark">
+                <input type="radio" name="cmethod" id="metodPost" class="checkmark" value="POST" onclick="checkPost()" checked>POST
+                <input type="radio" name="cmethod" id="metodGet" class="checkmark" value="GET" onclick="checkGet()">GET<br>
+            </div>
+            <h3>Selecciona el método de codificación</h3>
+            <div class="inputCheckmark">
+                <input type="radio" name="cencoding" id="urlencoded" class="checkmark" value="application/x-www-form-urlencoded" checked>application/x-www-form-urlencoded<br>
+				<input type="radio" name="cencoding" id="multipart" class="checkmark" value="multipart/form-data">multipart/form-data<br><br>
+            </div>
+
+
+            <input type="hidden" id="cbrowser" name="cbrowser">
+            <input type="hidden" id="cdate" name="cdate">
+
+            <button type="reset" name="reset" class="button restart" onclick="restart()">Reset</button>
+
+            <button type="submit" name="submit" class="button enviar" id="enivar">Enviar</button>
+
+            <h4>Miguel Pastoriza Santaclara</h4>
+
+            </form>
+  
+    </body>
+</html>

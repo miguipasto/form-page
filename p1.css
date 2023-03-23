@@ -1,0 +1,229 @@
+body{
+    height: 100%; 
+    font-family: 'Noto Sans', sans-serif;
+    background-image: url("fondo.jpg");
+    background-attachment:fixed;
+}
+
+#formulario{  
+    width: 500px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 30px;  
+    background-color: #fbfbfb; 
+    padding-left: 80px; 
+}
+
+.inputContainer input {
+    background-color: #fbfbfb; 
+    width: 428px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #ab4493; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+#ccomment{
+    background-color: #fbfbfb; 
+    width: 428px; 
+    height: 100px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #ab4493; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+
+.inputContainer input[type=file]{
+    border-width: 0px;
+}
+.inputArchive {
+    position: relative;
+    display: inline-block;  
+    border-radius: 7px;
+}
+
+.inputArchive::before{
+    background-color: #ab4493;
+    color: #fbfbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    content: 'Seleccionar una foto'; /* testo por defecto */
+    position: absolute;
+    height: 40px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.inputCheckmark{
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 18px;
+    
+}
+.inputCheckmark input{
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.inputCheckmark .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.content-select select::-ms-expand {
+    display: none;
+}
+
+.content-select{
+	max-width: 250px;
+	position: relative;
+}
+ 
+.content-select select{
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	border:1px solid #ab4493;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+ 
+.content-select select:hover{
+	background: #dda8d1;
+}
+
+.button{
+    background-color : #ab4493;
+    border-color: #ab4493;
+    color : white;
+    width: 428px; 
+    height: 60px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    cursor: pointer;
+    text-transform: uppercase;
+    
+}
+
+.restart{
+    background-color: #ab449383;
+    width: 200px; 
+    height: 40px; 
+    margin-bottom: 30px;
+    margin-left: 110px;
+}
+
+.inputContainer span#errorName{
+    color:red;
+    font-size: 14px;
+}
+
+.inputContainer span#correctName{
+    color:green;
+    font-size: 14px;
+}
+.inputContainer span#errorLogin{
+    color:red;
+    font-size: 14px;
+}
+
+.inputContainer span#correctLogin{
+    color:green;
+    font-size: 14px;
+}
+
+.inputContainer span#errorPswd{
+    color:red;
+    font-size: 14px;
+}
+
+.inputContainer span#correctPswd{
+    color:green;
+    font-size: 14px;
+}
+
+.inputContainer span#errorDNI{
+    color:red;
+    font-size: 14px;
+}
+
+.inputContainer span#correctDNI{
+    color:green;
+    font-size: 14px;
+}
+
+.inputContainer span#formatName{
+    color:grey;
+    font-size: 12px;
+}
+
+.inputContainer span#formatLogin{
+    color:grey;
+    font-size: 12px;
+}
+
+.inputContainer span#formatPswd{
+    color:grey;
+    font-size: 12px;
+}
+
+.inputContainer span#formatDNI{
+    color:grey;
+    font-size: 12px;
+}
+h4::first-line {
+    color: #ab4493;
+    font-size: 15px;
+}
